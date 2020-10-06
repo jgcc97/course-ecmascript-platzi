@@ -75,3 +75,56 @@ const a = 'b';
 
 console.log(a);
 
+/* OBJECTS STRUCTURE */
+let name = 'jose';
+let age = 23;
+
+// es5
+obj = { name: name, age: age };
+
+// es6
+obj2 = { name, age };
+
+console.log(obj);
+console.log(obj2);
+
+/*ANONYMOUS FUNCTIONS AND ARROW FUNCTIONS */
+const names = [
+    { name: 'Theo', age: age },
+    { name: 'Romagnoli', age: 25},
+    { name: 'Donnarumma', age: 21 },
+];
+
+let listOfNames = names.map(function (item) {
+   console.log(item.name);
+});
+
+let listOfNames2 = names.map((item) => console.log(item.name));
+
+const listOfNames3 = (name, age) => {
+    console.log(name);
+};
+
+const listOfNames4 = name => {
+    console.log(name);
+};
+
+const square = num => num * num;
+
+/* PROMISE FUNCTIONS */
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true)
+        {
+            resolve('Hey!');
+        }
+        else {
+            reject('Ops!')
+        }
+    });
+};
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('hola'))
+    .catch(error => console.log(error));
