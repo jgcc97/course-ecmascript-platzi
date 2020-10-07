@@ -36,3 +36,32 @@ console.log('food'.padEnd(12, ' ---------'));
 const data = {
     forward: 'Ibrahimovic',
 }
+
+/* ASYNC AWAIT */
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {
+        (false)
+            ? setTimeout(() => resolve('Hello World'), 3000)
+            : reject(new Error('Test Error'))
+    })
+};
+
+const helloAsyn = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+}
+
+helloAsyn();
+
+/* ASYNC WITH TRY CATCH */
+
+const anotherFunction = async () => {
+    try {
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+anotherFunction();
