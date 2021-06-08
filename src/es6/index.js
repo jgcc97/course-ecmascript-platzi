@@ -14,6 +14,9 @@ function newFunction2(name = 'jose', age = 23, country = 'VE') {
 newFunction2();
 newFunction2('Gabriela', 23, 'IT');
 
+newFunction2();
+newFunction2('Rodrigo', 23, 'ES');
+
 /* CONCATENATION STRUCTURE */
 let hello = 'Hello';
 let world = 'World';
